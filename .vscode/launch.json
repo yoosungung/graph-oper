@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "backend",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "\"${workspaceFolder}/backend/.venv/bin/uvicorn\" app.main:app --reload --host 127.0.0.1 --port 8000 --env-file \"${workspaceFolder}/backend/.env\"",
+      "cwd": "${workspaceFolder}/backend"
+    },
+    {
+      "name": "frontend",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev -- --host 127.0.0.1 --port 5173",
+      "cwd": "${workspaceFolder}/frontend"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "backend + frontend",
+      "configurations": ["backend", "frontend"],
+      "stopAll": true
+    }
+  ]
+}
