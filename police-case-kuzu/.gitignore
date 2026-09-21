@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+case.kuzu/
+*.kuzu
+sample.db/
+.DS_Store
+data/sample_10k/
